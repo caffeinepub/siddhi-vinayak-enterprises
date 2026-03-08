@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   FONT FACE DECLARATIONS
+   ============================================================ */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces-VariableItalic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ============================================================
+   DESIGN TOKENS — SIDDHI VINAYAK ENTERPRISES
+   Royal Blue · White · Gold
+   ============================================================ */
+@layer base {
+  :root {
+    /* Radius */
+    --radius: 0.5rem;
+
+    /* Brand palette */
+    /* Deep Royal Navy Blue: oklch(0.26 0.095 255) */
+    --navy: 0.26 0.095 255;
+    /* Rich Gold: oklch(0.78 0.16 75) */
+    --gold: 0.78 0.16 75;
+    /* Light gold tint: oklch(0.95 0.05 75) */
+    --gold-light: 0.95 0.05 75;
+    /* Sky blue tint bg: oklch(0.96 0.02 235) */
+    --blue-tint: 0.96 0.02 235;
+    /* Mid navy (section bg): oklch(0.20 0.08 255) */
+    --navy-dark: 0.20 0.08 255;
+    /* Bright accent blue: oklch(0.55 0.18 255) */
+    --blue-accent: 0.55 0.18 255;
+
+    /* Semantic tokens */
+    --background: 1 0 0;
+    --foreground: 0.18 0.05 255;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.05 255;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.05 255;
+    --primary: 0.26 0.095 255;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.96 0.02 235;
+    --secondary-foreground: 0.26 0.095 255;
+    --muted: 0.96 0.02 235;
+    --muted-foreground: 0.50 0.04 255;
+    --accent: 0.78 0.16 75;
+    --accent-foreground: 0.26 0.095 255;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.88 0.03 235;
+    --input: 0.88 0.03 235;
+    --ring: 0.55 0.18 255;
+    --chart-1: 0.26 0.095 255;
+    --chart-2: 0.78 0.16 75;
+    --chart-3: 0.55 0.18 255;
+    --chart-4: 0.20 0.08 255;
+    --chart-5: 0.65 0.12 75;
+    --sidebar: 0.26 0.095 255;
+    --sidebar-foreground: 1 0 0;
+    --sidebar-primary: 0.78 0.16 75;
+    --sidebar-primary-foreground: 0.26 0.095 255;
+    --sidebar-accent: 0.20 0.08 255;
+    --sidebar-accent-foreground: 1 0 0;
+    --sidebar-border: 0.35 0.08 255;
+    --sidebar-ring: 0.78 0.16 75;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground;
+    font-family: Arial, system-ui, sans-serif;
+    margin: 0;
+    background: #eef3f9;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ============================================================
+   CUSTOM UTILITY CLASSES
+   ============================================================ */
+@layer utilities {
+  .font-display {
+    font-family: "Fraunces", Georgia, serif;
+  }
+
+  .text-navy {
+    color: oklch(var(--navy));
+  }
+
+  .text-gold {
+    color: oklch(var(--gold));
+  }
+
+  .bg-navy {
+    background-color: oklch(var(--navy));
+  }
+
+  .bg-navy-dark {
+    background-color: oklch(var(--navy-dark));
+  }
+
+  .bg-gold {
+    background-color: oklch(var(--gold));
+  }
+
+  .bg-blue-tint {
+    background-color: oklch(var(--blue-tint));
+  }
+
+  .border-gold {
+    border-color: oklch(var(--gold));
+  }
+
+  .border-navy {
+    border-color: oklch(var(--navy));
+  }
+
+  .shadow-navy {
+    box-shadow: 0 4px 24px oklch(var(--navy) / 0.12);
+  }
+
+  .shadow-gold {
+    box-shadow: 0 2px 12px oklch(var(--gold) / 0.25);
+  }
+}
